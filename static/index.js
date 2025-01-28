@@ -62,7 +62,7 @@ async function getCasos(event) {
 }
 
 const crearCartas = (data) => {
-  let text 
+  let text = ""
   
   data.forEach(el => {
     text += `<div class="card-body">
@@ -76,3 +76,13 @@ const crearCartas = (data) => {
 
   return text
 }
+
+  document.getElementById("logoutButton").addEventListener("click", () => {
+    // Si usas localStorage
+    localStorage.removeItem("jwtToken");
+
+
+
+    // Redirige al usuario al login u otra página
+    window.location.href = "/";
+  });

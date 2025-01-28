@@ -3,6 +3,8 @@ import jwt from 'jsonwebtoken'
 /**
  *  headers {"Authorization": "Baerer <token>"}
  */
+// Función para generar un token con expiración
+
 
 export const Authorization = async(req, res, next) => {
 

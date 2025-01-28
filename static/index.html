@@ -1,52 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FBI System</title>
 
-    <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FBI System</title>
 
-    <script src="/index.js" defer></script>
-  </head>
-  <body>
-      <h1>&#128374; FBI System &#128374;</h1>
-    <div class="card bg-dark text-center">
-      <div class="card-body">
-        <form action="/SignIn">
-          <h1>&#128372;&#128372;&#128372;</h1>
-          <h5 class="card-title text-center">Ingrese sus credenciales</h5>
-          <div class="row d-flex align-items-center mb-1">
-            <div class="col-12">Email:</div>
-            <div class="col-7 m-auto"><input type="text" name="email" class="form-control" /></div>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/99d4a30b9b.js" crossorigin="anonymous"></script>
+
+  <script src="/index.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <section>
+    <nav class="navbar navbar-expand-lg text fixed-top" data-bs-theme="dark">
+      <div class="container-fluid">
+        <div class="contenedor">
+          <a class="navbar-brand etiqueta-i" href="#">
+            <div class="img-fluid"><img class="img-fluid" src="" alt=""></div>
+            <i id="logoutButton" class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i>
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Credenciales para usuarios
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-item"  onclick="handleItemClick(event)"> email: who@fbi.com <br> password: me</div>
+            <div class="dropdown-item" onclick="handleItemClick(event)">email: where@fbi.com <br>password: there</div>
+            <div class="dropdown-item" onclick="handleItemClick(event)">email: how@fbi.com <br>password: exactly</div>
           </div>
-          <div class="row d-flex align-items-center">
-            <div class="col-12">Password:</div>
-            <div class="col-7 m-auto"><input type="text" name="password" class="form-control" /></div>
+        </div>
+      </div>
+
+    </nav>
+  </section>
+  <script>
+    function handleItemClick(event) {
+      // Prevenir que el dropdown se cierre automáticamente
+      event.stopPropagation();
+      console.log("Item clicked: ", event.target.innerText);
+    }
+  </script>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>&#128374; FBI System &#128374;</h1>
+          <div class="card bg-dark text-center">
+            <div class="card-body">
+              <form action="/SignIn">
+                <h1>&#128372;&#128372;&#128372;</h1>
+                <h5 class="card-title text-center">Ingrese sus credenciales</h5>
+                <div class="row d-flex align-items-center mb-1">
+                  <div class="col-12">Email:</div>
+                  <div class="col-7 m-auto"><input type="text" name="email" class="form-control" /></div>
+                </div>
+                <div class="row d-flex align-items-center">
+                  <div class="col-12">Password:</div>
+                  <div class="col-7 m-auto"><input type="text" name="password" class="form-control" /></div>
+                </div>
+                <button type="submit" class="btn bg-light my-3">Ingresar &#128373;</button>
+              </form>
+            </div>
+
           </div>
-          <button type="submit" class="btn bg-light my-3">Ingresar &#128373;</button>
-        </form>
+        </div>
       </div>
     </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        background: black;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 60vh;
-      }
-    </style>
-  </body>
+
 </html>
